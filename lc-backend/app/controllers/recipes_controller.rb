@@ -6,13 +6,13 @@ class RecipesController < ApplicationController
     json_response(@recipes)
   end
 
+  def show
+    json_response(@recipe)
+  end
+
   def create
     @recipe = Recipe.create!(recipe_params)
     json_response(@recipe, :created)
-  end
-
-  def show
-    json_response(@recipe)
   end
 
   def update
