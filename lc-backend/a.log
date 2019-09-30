@@ -1,0 +1,602 @@
+.....FFFFFFFFFFFFFFFF.............
+
+Failures:
+
+  1) Instructions API: GET /recipes/:recipe_id/instructions when recipe exists returns all recipe instructions
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  2) Instructions API: GET /recipes/:recipe_id/instructions when recipe exists returns status code 200
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  3) Instructions API: GET /recipes/:recipe_id/instructions when recipe does not exist returns status code 404
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  4) Instructions API: GET /recipes/:recipe_id/instructions when recipe does not exist returns a not found message
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  5) Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction exists returns status code 200
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  6) Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction exists returns the instruction
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  7) Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction does not exist returns status code 404
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  8) Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction does not exist returns a not found message
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  9) Instructions API: POST /recipes/:recipe_id/instructions when request attributes are valid returns status code 201
+     Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+     KeyError:
+       Trait not registered: "recipe_id"
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+     # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+     # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+     # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+     # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # KeyError:
+     #   key not found: "recipe_id"
+     #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  10) Instructions API: POST /recipes/:recipe_id/instructions when an invalid request returns status code 422
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  11) Instructions API: POST /recipes/:recipe_id/instructions when an invalid request returns a failure message
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  12) Instructions API: PUT /recipes/:recipe_id/instructions/:id when instruction exists returns status code 204
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  13) Instructions API: PUT /recipes/:recipe_id/instructions/:id when instruction exists updates the instruction
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  14) Instructions API: PUT /recipes/:recipe_id/instructions/:id when the instruction does not exist returns status code 404
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  15) Instructions API: PUT /recipes/:recipe_id/instructions/:id when the instruction does not exist returns a not found message
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+  16) Instructions API: DELETE /recipes/:id returns status code 204
+      Failure/Error: let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
+
+      KeyError:
+        Trait not registered: "recipe_id"
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/decorator.rb:10:in `method_missing'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/internal.rb:49:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:114:in `trait_by_name'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `block in base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `map'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:106:in `base_traits'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:131:in `aggregate_from_traits_and_self'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition.rb:34:in `to_create'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/definition_hierarchy.rb:16:in `build_from_definition'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:125:in `build_hierarchy'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory.rb:88:in `compile'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/factory_runner.rb:14:in `run'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:20:in `block in define_singular_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block (2 levels) in define_list_strategy_method'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `initialize'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `new'
+      # /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:32:in `block in define_list_strategy_method'
+      # ./spec/requests/instructions_spec.rb:5:in `block (2 levels) in <top (required)>'
+      # ./spec/rails_helper.rb:82:in `block (3 levels) in <top (required)>'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/generic/base.rb:16:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/base.rb:100:in `cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:86:in `block (2 levels) in cleaning'
+      # /home/georgeipsum/gems/gems/database_cleaner-1.7.0/lib/database_cleaner/configuration.rb:87:in `cleaning'
+      # ./spec/rails_helper.rb:81:in `block (2 levels) in <top (required)>'
+      # ------------------
+      # --- Caused by: ---
+      # KeyError:
+      #   key not found: "recipe_id"
+      #   /home/georgeipsum/gems/gems/factory_bot-5.1.0/lib/factory_bot/registry.rb:23:in `find'
+
+Finished in 0.64271 seconds (files took 2.71 seconds to load)
+34 examples, 16 failures
+
+Failed examples:
+
+rspec ./spec/requests/instructions_spec.rb:13 # Instructions API: GET /recipes/:recipe_id/instructions when recipe exists returns all recipe instructions
+rspec ./spec/requests/instructions_spec.rb:17 # Instructions API: GET /recipes/:recipe_id/instructions when recipe exists returns status code 200
+rspec ./spec/requests/instructions_spec.rb:25 # Instructions API: GET /recipes/:recipe_id/instructions when recipe does not exist returns status code 404
+rspec ./spec/requests/instructions_spec.rb:29 # Instructions API: GET /recipes/:recipe_id/instructions when recipe does not exist returns a not found message
+rspec ./spec/requests/instructions_spec.rb:39 # Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction exists returns status code 200
+rspec ./spec/requests/instructions_spec.rb:43 # Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction exists returns the instruction
+rspec ./spec/requests/instructions_spec.rb:51 # Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction does not exist returns status code 404
+rspec ./spec/requests/instructions_spec.rb:55 # Instructions API: GET /recipes/:recipe_id/instructions/:id when recipe instruction does not exist returns a not found message
+rspec ./spec/requests/instructions_spec.rb:67 # Instructions API: POST /recipes/:recipe_id/instructions when request attributes are valid returns status code 201
+rspec ./spec/requests/instructions_spec.rb:75 # Instructions API: POST /recipes/:recipe_id/instructions when an invalid request returns status code 422
+rspec ./spec/requests/instructions_spec.rb:79 # Instructions API: POST /recipes/:recipe_id/instructions when an invalid request returns a failure message
+rspec ./spec/requests/instructions_spec.rb:91 # Instructions API: PUT /recipes/:recipe_id/instructions/:id when instruction exists returns status code 204
+rspec ./spec/requests/instructions_spec.rb:95 # Instructions API: PUT /recipes/:recipe_id/instructions/:id when instruction exists updates the instruction
+rspec ./spec/requests/instructions_spec.rb:104 # Instructions API: PUT /recipes/:recipe_id/instructions/:id when the instruction does not exist returns status code 404
+rspec ./spec/requests/instructions_spec.rb:108 # Instructions API: PUT /recipes/:recipe_id/instructions/:id when the instruction does not exist returns a not found message
+rspec ./spec/requests/instructions_spec.rb:117 # Instructions API: DELETE /recipes/:id returns status code 204
+
