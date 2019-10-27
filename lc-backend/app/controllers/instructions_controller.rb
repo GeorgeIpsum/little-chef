@@ -36,6 +36,6 @@ class InstructionsController < ApplicationController
   end
 
   def set_recipe_instruction
-    @instruction = @recipe.instructions.find_by!(id: params[:id]) if @todo
+    @instruction = @recipe.instructions.find_by!(id: params[:id]) if @recipe
   end
 end

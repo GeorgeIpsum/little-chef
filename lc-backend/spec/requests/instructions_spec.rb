@@ -53,7 +53,7 @@ RSpec.describe 'Instructions API:' do
       end
 
       it 'returns a not found message' do
-        expect(repsonse.body).to match(/Couldn't find Instruction/)
+        expect(response.body).to match(/Couldn't find Instruction/)
       end
     end
   end
@@ -93,8 +93,8 @@ RSpec.describe 'Instructions API:' do
       end
 
       it 'updates the instruction' do
-        updated_instruction = instruction.find(id)
-        expect(updated_instruction.text).to match(/Mozart/)
+        updated_instruction = Instruction.find(id)
+        expect(updated_instruction.text).to match(/Pan fry the steak/)
       end
     end
 
@@ -106,7 +106,7 @@ RSpec.describe 'Instructions API:' do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find instruction/)
+        expect(response.body).to match(/Couldn't find Instruction/)
       end
     end
   end
