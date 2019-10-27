@@ -1,13 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'Instructions API:' do
-  let!(:recipe) { create(:recipe) }
+  let(:user) { create(:user) }
+  let!(:recipe) { create(:recipe, created_by: user.id) }
   let!(:instructions) { create_list(:instruction, 20, recipe_id: recipe.id) }
   let(:recipe_id) { recipe.id }
   let(:id) { instructions.first.id }
+  let(:headers) { valid_headers }
 
   describe 'GET /recipes/:recipe_id/instructions' do
-    before { get "/recipes/#{recipe_id}/instructions" }
+    before { get "/recipes/#{recipe_id}/instructions", params: {}, headers: headers }
 
     context 'when recipe exists' do
       it 'returns all recipe instructions' do
@@ -33,7 +35,7 @@ RSpec.describe 'Instructions API:' do
   end
 
   describe 'GET /recipes/:recipe_id/instructions/:id' do
-    before { get "/recipes/#{recipe_id}/instructions/#{id}" }
+    before { get "/recipes/#{recipe_id}/instructions/#{id}", params: {}, headers: headers }
 
     context 'when recipe instruction exists' do
       it 'returns status code 200' do
@@ -59,10 +61,12 @@ RSpec.describe 'Instructions API:' do
   end
 
   describe 'POST /recipes/:recipe_id/instructions' do
-    let(:valid_attributes) { { text: 'Sear the steak', done: false } }
+    let(:valid_attributes) { { text: 'Sear the steak', done: false }.to_json }
 
     context 'when request attributes are valid' do
-      before { post "/recipes/#{recipe_id}/instructions", params: valid_attributes }
+      before do 
+        post "/recipes/#{recipe_id}/instructions", params: valid_attributes, headers: headers
+      end
 
       it 'returns status code 201' do
         expect(response).to have_http_status(201)
@@ -70,7 +74,7 @@ RSpec.describe 'Instructions API:' do
     end
 
     context 'when an invalid request' do
-      before { post "/recipes/#{recipe_id}/instructions", params: {} }
+      before { post "/recipes/#{recipe_id}/instructions", params: {}, headers: headers }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -83,9 +87,11 @@ RSpec.describe 'Instructions API:' do
   end
 
   describe 'PUT /recipes/:recipe_id/instructions/:id' do
-    let(:valid_attributes) { { text: 'Pan fry the steak' } }
+    let(:valid_attributes) { { text: 'Pan fry the steak' }.to_json }
 
-    before { put "/recipes/#{recipe_id}/instructions/#{id}", params: valid_attributes }
+    before do
+      put "/recipes/#{recipe_id}/instructions/#{id}", params: valid_attributes, headers: headers
+    end
 
     context 'when instruction exists' do
       it 'returns status code 204' do
@@ -112,7 +118,7 @@ RSpec.describe 'Instructions API:' do
   end
 
   describe 'DELETE /recipes/:id' do
-    before { delete "/recipes/#{recipe_id}/instructions/#{id}" }
+    before { delete "/recipes/#{recipe_id}/instructions/#{id}", params: {}, headers: headers }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)

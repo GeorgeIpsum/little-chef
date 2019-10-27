@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :update, :destroy]
 
   def index
-    @recipes = Recipe.all
+    @recipes = current_user.recipes
     json_response(@recipes)
   end
 
@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create!(recipe_params)
+    @recipe = current_user.recipes.create!(recipe_params)
     json_response(@recipe, :created)
   end
 
@@ -28,7 +28,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.permit(:title, :created_by)
+    params.permit(:title)
   end
 
   def set_recipe

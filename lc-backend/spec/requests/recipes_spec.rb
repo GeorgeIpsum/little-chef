@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Recipes API:', type: :request do
-  let!(:recipes) { create_list(:recipe, 10) }
+  let(:user) { create(:user) }
+  let!(:recipes) { create_list(:recipe, 10, created_by: user.id) }
   let(:recipe_id) { recipes.first.id }
+  let(:headers) { valid_headers }
 
   describe 'GET /recipes' do
 
-    before { get '/recipes' }
+    before { get '/recipes', params: {}, headers: headers }
 
     it 'returns recipes' do
       expect(json).not_to be_empty
@@ -19,7 +21,7 @@ RSpec.describe 'Recipes API:', type: :request do
   end
 
   describe 'GET /recipes/:id' do
-    before { get "/recipes/#{recipe_id}" }
+    before { get "/recipes/#{recipe_id}", params: {}, headers: headers }
 
     context 'when the record exists' do
       it 'returns the recipe' do
@@ -46,10 +48,12 @@ RSpec.describe 'Recipes API:', type: :request do
   end
 
   describe 'POST /recipes' do
-    let(:valid_attributes) { { title: 'Seared Steak', created_by: '1' } }
+    let(:valid_attributes) do
+      { title: 'Seared Steak', created_by: user.id.to_s }.to_json
+    end
 
     context 'when the request is valid' do
-      before { post '/recipes', params: valid_attributes }
+      before { post '/recipes', params: valid_attributes, headers: headers }
 
       it 'creates a recipe' do
         expect(json['title']).to eq('Seared Steak')
@@ -61,23 +65,24 @@ RSpec.describe 'Recipes API:', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/recipes', params: { title: 'Foobar' } }
+      let(:invalid_attributes) {{ title: nil}.to_json }
+      before { post '/recipes', params: invalid_attributes, headers: headers }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
       end
 
       it 'returns a validation failure message' do
-        expect(response.body).to match(/Validation failed: Created by can't be blank/)
+        expect(json['message']).to match(/Validation failed: Title can't be blank/)
       end
     end
   end
 
   describe 'PUT /recipes/:id' do
-    let(:valid_attributes) { { title: 'Comfi' } }
+    let(:valid_attributes) { { title: 'Comfi' }.to_json }
 
     context 'when the record exists' do
-      before { put "/recipes/#{recipe_id}", params: valid_attributes }
+      before { put "/recipes/#{recipe_id}", params: valid_attributes, headers: headers }
 
       it 'updates the record' do
         expect(response.body).to be_empty
@@ -90,7 +95,7 @@ RSpec.describe 'Recipes API:', type: :request do
   end
 
   describe 'DELETE /recipes/:id' do
-    before { delete "/recipes/#{recipe_id}" }
+    before { delete "/recipes/#{recipe_id}", params: {}, headers: headers }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)
