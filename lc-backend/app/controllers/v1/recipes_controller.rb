@@ -5,7 +5,7 @@ module V1
     before_action :set_recipe, only: %i[show update destroy]
 
     def index
-      @recipes = current_user.recipes
+      @recipes = current_user.recipes.paginate(page: params[:page], per_page: 20)
       json_response(@recipes)
     end
 
